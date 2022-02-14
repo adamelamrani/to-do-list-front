@@ -4,7 +4,7 @@ const tasksReducer = (currentTasks = [], action = {}) => {
   let newTasks;
   switch (action.type) {
     case actionTypes.loadTasks:
-      newTasks = [...action.loadTasks];
+      newTasks = [...action.tasks];
       break;
     case actionTypes.addTasks:
       newTasks = currentTasks.filter((task) => action.id !== task.id);
