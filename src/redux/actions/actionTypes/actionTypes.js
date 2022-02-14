@@ -4,3 +4,5 @@ const actionTypes = {
   updateTasks: "update-tasks",
   deleteTasks: "delete-tasks",
 };
+
+export default actionTypes;
