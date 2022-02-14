@@ -36,7 +36,8 @@
       "!src/**/*.test.js",
       "!src/index.js",
       "!src/setupTests.js",
-      "!src/redux/reducers/index.js"
+      "!src/redux/reducers/index.js",
+      "!src/redux/store/index.js"
     ]
   },
   "browserslist": {
