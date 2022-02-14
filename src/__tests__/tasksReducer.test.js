@@ -53,4 +53,15 @@ describe("Given a tasks reducer function", () => {
       expect(reducer).toEqual(expectedOutput);
     });
   });
+
+  describe("When it doesn't receive any action nor state", () => {
+    test("Then it should return an empty array", () => {
+      const tasks = [];
+      const action = {};
+
+      const reducer = tasksReducer(tasks, action);
+
+      expect(reducer).toEqual([]);
+    });
+  });
 });
