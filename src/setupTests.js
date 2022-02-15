@@ -1,6 +1,4 @@
 import "@testing-library/jest-dom";
-
-import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
 import { server } from "./mocks/server.js";
 import store from "./redux/store";

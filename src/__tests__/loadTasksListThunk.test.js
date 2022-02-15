@@ -1,4 +1,3 @@
-import actionTypes from "../redux/actions/actionTypes/actionTypes";
 import {
   deleteTaskThunk,
   loadTasksListThunk,
