@@ -19,7 +19,6 @@ function App() {
     dispatch(loadTasksListThunk);
   }, [dispatch]);
 
-  console.log(todoList);
   return (
     <>
       <main>
