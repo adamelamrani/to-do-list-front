@@ -36,7 +36,8 @@
       "src/**/*.js",
       "!src/**/*.test.js",
       "!src/index.js",
-      "!src/setupTests.js"
+      "!src/setupTests.js",
+      "!src/mocks/*.js"
     ]
   },
   "browserslist": {
