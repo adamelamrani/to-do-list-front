@@ -2,6 +2,10 @@ import styled from "styled-components";
 
 const TaskList = ({ todoList, onClickAction }) => {
   const StyledLi = styled.li`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     .done {
       text-decoration: line-through;
     }
