@@ -1,4 +1,4 @@
-import loadTasksListThunk from "../redux/thunk/loadTasksListThunk";
+import { loadTasksListThunk } from "../redux/thunk/loadTasksListThunk";
 
 describe("Given a load tasks list thunk function", () => {
   describe("When it's invoked", () => {

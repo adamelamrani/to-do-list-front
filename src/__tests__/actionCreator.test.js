@@ -72,22 +72,11 @@ describe("Given a loadTask function", () => {
   });
 
   test("Then it should return an object with the delete-tasks type", () => {
-    const tasks = [
-      {
-        id: 1,
-        task: "Walk the dog",
-        done: true,
-      },
-      {
-        id: 2,
-        task: "Prepare a meal",
-        done: false,
-      },
-    ];
-    const expectedOutput = deleteTasksAction(tasks);
+    const id = 1;
+    const expectedOutput = deleteTasksAction(id);
     const expectecAction = {
       type: "delete-tasks",
-      tasks: tasks,
+      id: id,
     };
     expect(expectedOutput).toEqual(expectecAction);
   });
