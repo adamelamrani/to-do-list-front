@@ -1,9 +1,18 @@
+import styled from "styled-components";
+
 const TaskList = ({ todoList, onClickAction }) => {
+  const StyledLi = styled.li`
+    .done {
+      text-decoration: line-through;
+    }
+  `;
   return (
     <ul>
       {todoList.map((task) => (
-        <li key={task.id} className={task.done === true ? "done" : "false"}>
-          <p>Task: {task.task} </p>
+        <StyledLi key={task.id}>
+          <p className={task.done === true ? "done" : "false"}>
+            Task: {task.task}{" "}
+          </p>
           <button
             type="button"
             className="delete-button"
@@ -12,7 +21,7 @@ const TaskList = ({ todoList, onClickAction }) => {
           >
             Remove
           </button>
-        </li>
+        </StyledLi>
       ))}
     </ul>
   );
