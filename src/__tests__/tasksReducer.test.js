@@ -64,4 +64,40 @@ describe("Given a tasks reducer function", () => {
       expect(reducer).toEqual([]);
     });
   });
+
+  describe("When it receives an action with type delete", () => {
+    test("Then it should remove the object with id 100", () => {
+      const tasks = [
+        {
+          id: 100,
+          name: "Rulo",
+          task: "Sleep and play",
+          done: true,
+        },
+        {
+          id: 101,
+          name: "Rulo",
+          task: "Sleep and play",
+          done: true,
+        },
+      ];
+      const id = 100;
+      const action = {
+        type: "delete-tasks",
+        id: id,
+      };
+
+      const expectedOutput = [
+        {
+          id: 101,
+          name: "Rulo",
+          task: "Sleep and play",
+          done: true,
+        },
+      ];
+      const reducer = tasksReducer(tasks, action);
+
+      expect(reducer).toEqual(expectedOutput);
+    });
+  });
 });

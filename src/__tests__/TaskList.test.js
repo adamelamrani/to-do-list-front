@@ -8,12 +8,12 @@ describe("Given a TaskList compoent", () => {
     test("Then it should return a list", () => {
       const todos = [
         { id: 1, name: "Adam", task: "to do list" },
-        { id: 1, name: "Aida", task: "walk rulo" },
+        { id: 2, name: "Aida", task: "walk rulo" },
       ];
 
       render(
         <Provider store={store}>
-          <TaskList todos={todos} />{" "}
+          <TaskList todoList={todos} />
         </Provider>
       );
 
