@@ -11,8 +11,8 @@ const TaskList = () => {
   return (
     <ul>
       {todoList.map((task) => (
-        <li key={task.id}>
-          Task: {task.task}, Done by: {task.name}
+        <li key={task.id} className={task.done === true ? "done" : "false"}>
+          Task: {task.task}
         </li>
       ))}
     </ul>
