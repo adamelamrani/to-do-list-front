@@ -7,6 +7,7 @@ const TaskList = ({ todoList, onClickAction }) => {
           <button
             type="button"
             className="delete-button"
+            key={task.id}
             onClick={onClickAction}
           >
             Remove
