@@ -1,5 +1,7 @@
 import { render, screen } from "@testing-library/react";
+import { Provider } from "react-redux";
 import TaskList from "../components/TaskList/TaskList";
+import store from "../redux/store";
 
 describe("Given a TaskList compoent", () => {
   describe("When it's rendered", () => {
@@ -9,25 +11,15 @@ describe("Given a TaskList compoent", () => {
         { id: 1, name: "Aida", task: "walk rulo" },
       ];
 
-      render(<TaskList todos={todos} />);
+      render(
+        <Provider store={store}>
+          <TaskList todos={todos} />{" "}
+        </Provider>
+      );
 
       const expectedOutput = screen.getByRole("list");
 
       expect(expectedOutput).toBeInTheDocument();
     });
-  });
-
-  test("Then it should render names Adam and Aida", () => {
-    const todos = [
-      { id: 1, name: /Adam/i, task: "to do list" },
-      { id: 2, name: /Aida/i, task: "walk rulo" },
-    ];
-
-    render(<TaskList todos={todos} />);
-
-    const expectedNameOne = screen.getByText(todos[0].name);
-    const expectedNameTwo = screen.getByText(todos[1].name);
-    expect(expectedNameOne).toBeInTheDocument();
-    expect(expectedNameTwo).toBeInTheDocument();
   });
 });
